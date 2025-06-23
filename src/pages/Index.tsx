@@ -1,14 +1,20 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from 'react';
+import TopHeader from '../components/layout/TopHeader';
+import PageHeader from '../components/layout/PageHeader';
+import StatCardGrid from '../components/Dashboard/StatCardGrid';
 
-const Index = () => {
+const DashboardOverviewPage: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <TopHeader />
+      <main className="p-6">
+        <div className="mx-auto w-full max-w-screen-lg space-y-6">
+          <PageHeader />
+          <StatCardGrid />
+        </div>
+      </main>
     </div>
   );
 };
 
-export default Index;
+export default DashboardOverviewPage;
